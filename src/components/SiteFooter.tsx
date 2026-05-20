@@ -22,10 +22,10 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-bold mb-3">Contacto</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /> La Alborada, Perú</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> (+51) 000 000 000</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> contacto@ielaalborada.edu.pe</li>
-            <li className="flex gap-2"><Clock className="h-4 w-4 mt-0.5 text-primary" /> Lun – Vie: 8:00 a.m. – 3:00 p.m.</li>
+            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>La Alborada, Perú</span></li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>(+51) 000 000 000</span></li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>contacto@ielaalborada.edu.pe</span></li>
+            <li className="flex gap-2"><Clock className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>Lun – Vie: 8:00 a.m. – 3:00 p.m.</span></li>
           </ul>
         </div>
 
