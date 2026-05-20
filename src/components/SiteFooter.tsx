@@ -3,7 +3,6 @@ import { Facebook, Instagram, MapPin, Mail, Phone, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 export function SiteFooter() {
-  const year = new Date().getFullYear();
   return (
     <footer className="mt-16 border-t bg-secondary/40">
       <div className="mx-auto max-w-7xl px-6 py-12 grid gap-10 md:grid-cols-4">
