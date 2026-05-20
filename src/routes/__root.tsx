@@ -1,19 +1,16 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
-  useRouter,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/AppSidebar";
-import { SiteFooter } from "@/components/SiteFooter";
-import { FloatingActions } from "@/components/FloatingActions";
-import { Toaster } from "@/components/ui/sonner";
+import { Navbar } from "../components/Navbar";
+import { SiteFooter } from "../components/SiteFooter";
+import { FloatingActions } from "../components/FloatingActions";
+import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -25,44 +22,9 @@ function NotFoundComponent() {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
-  const router = useRouter();
-
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
-        </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          <button
-            onClick={() => {
-              router.invalidate();
-              reset();
-            }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Try again
-          </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Go home
           </a>
@@ -102,7 +64,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
@@ -124,23 +85,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <SidebarProvider>
-        <div className="flex min-h-screen w-full bg-background">
-          <AppSidebar />
-          <div className="flex flex-1 flex-col min-w-0">
-            <header className="sticky top-0 z-30 flex h-14 items-center gap-2 border-b bg-background/80 backdrop-blur px-4 md:hidden">
-              <SidebarTrigger />
-              <span className="font-semibold text-sm">I.E. La Alborada 30225</span>
-            </header>
-            <main className="flex-1">
-              <Outlet />
-            </main>
-            <SiteFooter />
-          </div>
-          <FloatingActions />
-        </div>
-      </SidebarProvider>
-      <Toaster />
+      <div className="min-h-screen w-full bg-background flex flex-col">
+        <Navbar />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <SiteFooter />
+        <FloatingActions />
+      </div>
     </QueryClientProvider>
   );
 }
+
