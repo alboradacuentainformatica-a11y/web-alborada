@@ -54,7 +54,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t">
         <div className="mx-auto max-w-7xl px-6 py-4 text-center text-xs text-muted-foreground">
-          © {year} – I.E. La Alborada I.E. 30225. Todos los derechos reservados. Elaborado por <span className="font-semibold text-foreground">Gato_Tech</span>.
+          © 2026 – I.E. La Alborada I.E. 30225. Todos los derechos reservados. Elaborado por <span className="font-semibold text-foreground">Gato_Tech</span>.
         </div>
       </div>
     </footer>
