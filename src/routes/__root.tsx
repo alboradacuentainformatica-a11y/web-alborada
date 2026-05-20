@@ -7,10 +7,10 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import { Navbar } from "@/components/Navbar";
-import { SiteFooter } from "@/components/SiteFooter";
-import { FloatingActions } from "@/components/FloatingActions";
-import { Toaster } from "@/components/ui/sonner";
+import { Navbar } from "../components/Navbar";
+import { SiteFooter } from "../components/SiteFooter";
+import { FloatingActions } from "../components/FloatingActions";
+import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
