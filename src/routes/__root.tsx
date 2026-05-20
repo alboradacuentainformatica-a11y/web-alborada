@@ -93,7 +93,6 @@ function RootComponent() {
         <SiteFooter />
         <FloatingActions />
       </div>
-      <Toaster />
     </QueryClientProvider>
   );
 }
