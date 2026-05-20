@@ -9,38 +9,213 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PrimariaRouteImport } from './routes/primaria'
+import { Route as NoticiasRouteImport } from './routes/noticias'
+import { Route as DocentesRouteImport } from './routes/docentes'
+import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as VidaCronogramaRouteImport } from './routes/vida.cronograma'
+import { Route as VidaActividadesRouteImport } from './routes/vida.actividades'
+import { Route as NosotrosMisionVisionRouteImport } from './routes/nosotros.mision-vision'
+import { Route as NosotrosInstalacionesRouteImport } from './routes/nosotros.instalaciones'
+import { Route as NosotrosHistoriaRouteImport } from './routes/nosotros.historia'
+import { Route as AdmisionRequisitosRouteImport } from './routes/admision.requisitos'
+import { Route as AdmisionProcesoRouteImport } from './routes/admision.proceso'
 
+const PrimariaRoute = PrimariaRouteImport.update({
+  id: '/primaria',
+  path: '/primaria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoticiasRoute = NoticiasRouteImport.update({
+  id: '/noticias',
+  path: '/noticias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocentesRoute = DocentesRouteImport.update({
+  id: '/docentes',
+  path: '/docentes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactoRoute = ContactoRouteImport.update({
+  id: '/contacto',
+  path: '/contacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VidaCronogramaRoute = VidaCronogramaRouteImport.update({
+  id: '/vida/cronograma',
+  path: '/vida/cronograma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VidaActividadesRoute = VidaActividadesRouteImport.update({
+  id: '/vida/actividades',
+  path: '/vida/actividades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosMisionVisionRoute = NosotrosMisionVisionRouteImport.update({
+  id: '/nosotros/mision-vision',
+  path: '/nosotros/mision-vision',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosInstalacionesRoute = NosotrosInstalacionesRouteImport.update({
+  id: '/nosotros/instalaciones',
+  path: '/nosotros/instalaciones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosotrosHistoriaRoute = NosotrosHistoriaRouteImport.update({
+  id: '/nosotros/historia',
+  path: '/nosotros/historia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmisionRequisitosRoute = AdmisionRequisitosRouteImport.update({
+  id: '/admision/requisitos',
+  path: '/admision/requisitos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmisionProcesoRoute = AdmisionProcesoRouteImport.update({
+  id: '/admision/proceso',
+  path: '/admision/proceso',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/docentes': typeof DocentesRoute
+  '/noticias': typeof NoticiasRoute
+  '/primaria': typeof PrimariaRoute
+  '/admision/proceso': typeof AdmisionProcesoRoute
+  '/admision/requisitos': typeof AdmisionRequisitosRoute
+  '/nosotros/historia': typeof NosotrosHistoriaRoute
+  '/nosotros/instalaciones': typeof NosotrosInstalacionesRoute
+  '/nosotros/mision-vision': typeof NosotrosMisionVisionRoute
+  '/vida/actividades': typeof VidaActividadesRoute
+  '/vida/cronograma': typeof VidaCronogramaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/docentes': typeof DocentesRoute
+  '/noticias': typeof NoticiasRoute
+  '/primaria': typeof PrimariaRoute
+  '/admision/proceso': typeof AdmisionProcesoRoute
+  '/admision/requisitos': typeof AdmisionRequisitosRoute
+  '/nosotros/historia': typeof NosotrosHistoriaRoute
+  '/nosotros/instalaciones': typeof NosotrosInstalacionesRoute
+  '/nosotros/mision-vision': typeof NosotrosMisionVisionRoute
+  '/vida/actividades': typeof VidaActividadesRoute
+  '/vida/cronograma': typeof VidaCronogramaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contacto': typeof ContactoRoute
+  '/docentes': typeof DocentesRoute
+  '/noticias': typeof NoticiasRoute
+  '/primaria': typeof PrimariaRoute
+  '/admision/proceso': typeof AdmisionProcesoRoute
+  '/admision/requisitos': typeof AdmisionRequisitosRoute
+  '/nosotros/historia': typeof NosotrosHistoriaRoute
+  '/nosotros/instalaciones': typeof NosotrosInstalacionesRoute
+  '/nosotros/mision-vision': typeof NosotrosMisionVisionRoute
+  '/vida/actividades': typeof VidaActividadesRoute
+  '/vida/cronograma': typeof VidaCronogramaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contacto'
+    | '/docentes'
+    | '/noticias'
+    | '/primaria'
+    | '/admision/proceso'
+    | '/admision/requisitos'
+    | '/nosotros/historia'
+    | '/nosotros/instalaciones'
+    | '/nosotros/mision-vision'
+    | '/vida/actividades'
+    | '/vida/cronograma'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contacto'
+    | '/docentes'
+    | '/noticias'
+    | '/primaria'
+    | '/admision/proceso'
+    | '/admision/requisitos'
+    | '/nosotros/historia'
+    | '/nosotros/instalaciones'
+    | '/nosotros/mision-vision'
+    | '/vida/actividades'
+    | '/vida/cronograma'
+  id:
+    | '__root__'
+    | '/'
+    | '/contacto'
+    | '/docentes'
+    | '/noticias'
+    | '/primaria'
+    | '/admision/proceso'
+    | '/admision/requisitos'
+    | '/nosotros/historia'
+    | '/nosotros/instalaciones'
+    | '/nosotros/mision-vision'
+    | '/vida/actividades'
+    | '/vida/cronograma'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactoRoute: typeof ContactoRoute
+  DocentesRoute: typeof DocentesRoute
+  NoticiasRoute: typeof NoticiasRoute
+  PrimariaRoute: typeof PrimariaRoute
+  AdmisionProcesoRoute: typeof AdmisionProcesoRoute
+  AdmisionRequisitosRoute: typeof AdmisionRequisitosRoute
+  NosotrosHistoriaRoute: typeof NosotrosHistoriaRoute
+  NosotrosInstalacionesRoute: typeof NosotrosInstalacionesRoute
+  NosotrosMisionVisionRoute: typeof NosotrosMisionVisionRoute
+  VidaActividadesRoute: typeof VidaActividadesRoute
+  VidaCronogramaRoute: typeof VidaCronogramaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/primaria': {
+      id: '/primaria'
+      path: '/primaria'
+      fullPath: '/primaria'
+      preLoaderRoute: typeof PrimariaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/noticias': {
+      id: '/noticias'
+      path: '/noticias'
+      fullPath: '/noticias'
+      preLoaderRoute: typeof NoticiasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/docentes': {
+      id: '/docentes'
+      path: '/docentes'
+      fullPath: '/docentes'
+      preLoaderRoute: typeof DocentesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacto': {
+      id: '/contacto'
+      path: '/contacto'
+      fullPath: '/contacto'
+      preLoaderRoute: typeof ContactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +223,71 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/vida/cronograma': {
+      id: '/vida/cronograma'
+      path: '/vida/cronograma'
+      fullPath: '/vida/cronograma'
+      preLoaderRoute: typeof VidaCronogramaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vida/actividades': {
+      id: '/vida/actividades'
+      path: '/vida/actividades'
+      fullPath: '/vida/actividades'
+      preLoaderRoute: typeof VidaActividadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros/mision-vision': {
+      id: '/nosotros/mision-vision'
+      path: '/nosotros/mision-vision'
+      fullPath: '/nosotros/mision-vision'
+      preLoaderRoute: typeof NosotrosMisionVisionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros/instalaciones': {
+      id: '/nosotros/instalaciones'
+      path: '/nosotros/instalaciones'
+      fullPath: '/nosotros/instalaciones'
+      preLoaderRoute: typeof NosotrosInstalacionesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nosotros/historia': {
+      id: '/nosotros/historia'
+      path: '/nosotros/historia'
+      fullPath: '/nosotros/historia'
+      preLoaderRoute: typeof NosotrosHistoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admision/requisitos': {
+      id: '/admision/requisitos'
+      path: '/admision/requisitos'
+      fullPath: '/admision/requisitos'
+      preLoaderRoute: typeof AdmisionRequisitosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admision/proceso': {
+      id: '/admision/proceso'
+      path: '/admision/proceso'
+      fullPath: '/admision/proceso'
+      preLoaderRoute: typeof AdmisionProcesoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactoRoute: ContactoRoute,
+  DocentesRoute: DocentesRoute,
+  NoticiasRoute: NoticiasRoute,
+  PrimariaRoute: PrimariaRoute,
+  AdmisionProcesoRoute: AdmisionProcesoRoute,
+  AdmisionRequisitosRoute: AdmisionRequisitosRoute,
+  NosotrosHistoriaRoute: NosotrosHistoriaRoute,
+  NosotrosInstalacionesRoute: NosotrosInstalacionesRoute,
+  NosotrosMisionVisionRoute: NosotrosMisionVisionRoute,
+  VidaActividadesRoute: VidaActividadesRoute,
+  VidaCronogramaRoute: VidaCronogramaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
