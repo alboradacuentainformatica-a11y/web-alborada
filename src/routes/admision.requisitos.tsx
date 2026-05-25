@@ -5,7 +5,7 @@ import { CheckCircle2, Download } from "lucide-react";
 export const Route = createFileRoute("/admision/requisitos")({
   head: () => ({
     meta: [
-      { title: "Requisitos de Admisión — I.E. La Alborada 30225" },
+      { title: "Requisitos de Admisión " },
       { name: "description", content: "Documentos requeridos para la matrícula en la I.E. La Alborada 30225." },
     ],
   }),

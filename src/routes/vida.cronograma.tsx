@@ -5,7 +5,7 @@ import { CalendarDays } from "lucide-react";
 export const Route = createFileRoute("/vida/cronograma")({
   head: () => ({
     meta: [
-      { title: "Cronograma Anual — I.E. La Alborada 30225" },
+      { title: "Cronograma Anual" },
       { name: "description", content: "Calendario anual de actividades de la I.E. La Alborada 30225." },
     ],
   }),

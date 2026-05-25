@@ -7,7 +7,7 @@ import b5 from "@/assets/banner-5.jpg";
 export const Route = createFileRoute("/nosotros/historia")({
   head: () => ({
     meta: [
-      { title: "Historia — I.E. La Alborada 30225" },
+      { title: "Historia" },
       { name: "description", content: "Reseña histórica de la I.E. La Alborada 30225, una institución con tradición educativa." },
     ],
   }),

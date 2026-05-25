@@ -7,7 +7,7 @@ import b4 from "@/assets/banner-4.jpg";
 export const Route = createFileRoute("/nosotros/mision-vision")({
   head: () => ({
     meta: [
-      { title: "Misión y Visión — I.E. La Alborada 30225" },
+      { title: "Misión y Visión" },
       { name: "description", content: "Misión y visión institucional de la I.E. La Alborada 30225." },
     ],
   }),

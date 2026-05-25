@@ -8,7 +8,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — I.E. La Alborada 30225" },
+      { title: "Contacto " },
       { name: "description", content: "Contáctanos: dirección, teléfono, correo y formulario de contacto." },
     ],
   }),

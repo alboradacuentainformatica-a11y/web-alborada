@@ -11,7 +11,7 @@ import b5 from "@/assets/banner-5.jpg";
 export const Route = createFileRoute("/vida/actividades")({
   head: () => ({
     meta: [
-      { title: "Actividades por grado — I.E. La Alborada 30225" },
+      { title: "Actividades por grado" },
       { name: "description", content: "Galería de actividades de cada grado de primaria." },
     ],
   }),

@@ -9,7 +9,7 @@ import b1 from "@/assets/banner-1.jpg";
 export const Route = createFileRoute("/primaria")({
   head: () => ({
     meta: [
-      { title: "Educación Primaria — I.E. La Alborada 30225" },
+      { title: "Educación Primaria" },
       { name: "description", content: "Educación primaria de 1° a 6° grado con metodología activa y formación en valores." },
     ],
   }),

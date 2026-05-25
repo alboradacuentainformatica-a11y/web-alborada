@@ -9,7 +9,7 @@ import b5 from "@/assets/banner-5.jpg";
 export const Route = createFileRoute("/nosotros/instalaciones")({
   head: () => ({
     meta: [
-      { title: "Instalaciones — I.E. La Alborada 30225" },
+      { title: "Instalaciones" },
       { name: "description", content: "Conoce nuestras aulas, biblioteca, aula de cómputo y área deportiva." },
     ],
   }),

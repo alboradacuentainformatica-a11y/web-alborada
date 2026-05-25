@@ -12,7 +12,7 @@ import {
   CalendarRange,
   ArrowRight,
 } from "lucide-react";
-import b1 from "@/assets/banner-1.jpg";
+import b1 from "@/assets/banner_oficial.png";
 import b2 from "@/assets/banner-2.jpg";
 import b3 from "@/assets/banner-3.jpg";
 import b4 from "@/assets/banner-4.jpg";
@@ -21,7 +21,7 @@ import b5 from "@/assets/banner-5.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Inicio — I.E. La Alborada 30225" },
+      { title: "I.E. La Alborada 30225" },
       { name: "description", content: "Bienvenidos al portal de la I.E. La Alborada 30225. Excelencia académica y formación integral en educación primaria." },
     ],
   }),
@@ -34,6 +34,7 @@ const slides = [
   { src: b3, title: "Espacios para crecer", subtitle: "Biblioteca, cómputo y mucho más" },
   { src: b4, title: "Deporte y vida sana", subtitle: "Desarrollo físico y trabajo en equipo" },
   { src: b5, title: "Tecnología en el aula", subtitle: "Preparando a los líderes del mañana" },
+
 ];
 
 const values = [
@@ -162,9 +163,9 @@ function Index() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA 
       <section className="mx-auto max-w-6xl px-6 pb-20">
-        <div className="rounded-3xl bg-[var(--gradient-hero)] p-10 md:p-14 text-primary-foreground text-center shadow-[var(--shadow-soft)]">
+        <div className="rounded-3xl bg-gradient-hero p-10 md:p-14 text-primary-foreground text-center shadow-[var(--shadow-soft)]">
           <h2 className="text-3xl md:text-4xl font-bold">Forma parte de nuestra familia educativa</h2>
           <p className="mt-3 text-primary-foreground/90 max-w-2xl mx-auto">
             Descubre el proceso de admisión y los requisitos para que tu hijo o hija inicie esta gran aventura con nosotros.
@@ -172,6 +173,33 @@ function Index() {
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link to="/admision/proceso" className="rounded-full bg-white text-primary px-6 py-3 font-semibold hover:scale-105 transition-transform">Ver proceso</Link>
             <Link to="/contacto" className="rounded-full bg-white/10 border border-white/40 px-6 py-3 font-semibold hover:bg-white/20 transition">Contáctanos</Link>
+          </div>
+
+
+        </div>
+      </section>
+      */}
+
+ {/* Valores */}
+      <section className="bg-secondary/40 py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Forma parte de nuestra familia educativa</h2>
+            <p className="mt-2 text-muted-foreground">Los pilares que guían nuestra formación</p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            {values.map((v) => (
+              <div
+                key={v.title}
+                className="group rounded-2xl bg-card p-6 text-center shadow-sm border hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] transition-all"
+              >
+                <div className="mx-auto h-14 w-14 grid place-items-center rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <v.icon className="h-7 w-7" />
+                </div>
+                <h3 className="mt-4 font-bold">{v.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{v.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

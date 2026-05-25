@@ -8,7 +8,7 @@ import b4 from "@/assets/banner-4.jpg";
 export const Route = createFileRoute("/noticias")({
   head: () => ({
     meta: [
-      { title: "Noticias — I.E. La Alborada 30225" },
+      { title: "Noticias" },
       { name: "description", content: "Últimas noticias y eventos de la I.E. La Alborada 30225." },
     ],
   }),
