@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 export const Route = createFileRoute("/admision/proceso")({
   head: () => ({
     meta: [
-      { title: "Proceso de Admisión — I.E. La Alborada 30225" },
+      { title: "Proceso de Admisión" },
       { name: "description", content: "Pasos para la admisión a la I.E. La Alborada 30225." },
     ],
   }),

@@ -56,14 +56,14 @@ function ContactoPage() {
           <h2 className="text-2xl font-bold mb-6">Información de contacto</h2>
           <ul className="space-y-4">
             <li className="flex gap-3"><MapPin className="h-5 w-5 text-primary mt-1" /><div><p className="font-semibold">Dirección</p><p className="text-sm text-muted-foreground">La Alborada, Perú</p></div></li>
-            <li className="flex gap-3"><Phone className="h-5 w-5 text-primary mt-1" /><div><p className="font-semibold">Teléfono</p><p className="text-sm text-muted-foreground">(+51) 000 000 000</p></div></li>
-            <li className="flex gap-3"><Mail className="h-5 w-5 text-primary mt-1" /><div><p className="font-semibold">Correo</p><p className="text-sm text-muted-foreground">contacto@ielaalborada.edu.pe</p></div></li>
-            <li className="flex gap-3"><Clock className="h-5 w-5 text-primary mt-1" /><div><p className="font-semibold">Horario</p><p className="text-sm text-muted-foreground">Lunes a Viernes — 8:00 a.m. a 3:00 p.m.</p></div></li>
+            <li className="flex gap-3"><Phone className="h-5 w-5 text-primary mt-1" /><div><p className="font-semibold">Celular</p><p className="text-sm text-muted-foreground">064 636258</p></div></li>
+            <li className="flex gap-3"><Mail className="h-5 w-5 text-primary mt-1" /><div><p className="font-semibold">Correo</p><p className="text-sm text-muted-foreground">Laalborada30225@gmail.com</p></div></li>
+            <li className="flex gap-3"><Clock className="h-5 w-5 text-primary mt-1" /><div><p className="font-semibold">Horario</p><p className="text-sm text-muted-foreground">Lunes a Viernes — 8:00 a.m. a 3:30 p.m.</p></div></li>
           </ul>
-          <div className="mt-8 rounded-2xl overflow-hidden border shadow-sm aspect-[4/3]">
+          <div className="mt-4 rounded-2xl overflow-hidden border shadow-sm aspect-[4/3]">
             <iframe
               title="Ubicación"
-              src="https://www.google.com/maps?q=La+Alborada+Peru&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.949935052878!2d-75.23057802475742!3d-12.046965741904756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e9775c91ff803%3A0x51a798098a527c06!2sI.E.%2030225%20La%20Alborada!5e0!3m2!1ses!2spe!4v1781627232671!5m2!1ses!2spe"
               className="h-full w-full"
               loading="lazy"
             />
@@ -80,7 +80,7 @@ function ContactoPage() {
             <input className={input} placeholder="Correo" type="email" value={form.correo} onChange={(e) => setForm({ ...form, correo: e.target.value })} maxLength={255} />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <input className={input} placeholder="Teléfono" value={form.telefono} onChange={(e) => setForm({ ...form, telefono: e.target.value })} maxLength={20} />
+            <input className={input} placeholder="WhatsApp" value={form.telefono} onChange={(e) => setForm({ ...form, telefono: e.target.value })} maxLength={20} />
             <input className={input} placeholder="Asunto" value={form.asunto} onChange={(e) => setForm({ ...form, asunto: e.target.value })} maxLength={150} />
           </div>
           <textarea className={`${input} min-h-[140px] resize-y`} placeholder="Mensaje" value={form.mensaje} onChange={(e) => setForm({ ...form, mensaje: e.target.value })} maxLength={1000} />

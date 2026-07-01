@@ -9,7 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as PrimariaRouteImport } from './routes/primaria'
+import { Route as PoliticasRouteImport } from './routes/politicas'
 import { Route as NoticiasRouteImport } from './routes/noticias'
 import { Route as DocentesRouteImport } from './routes/docentes'
 import { Route as ContactoRouteImport } from './routes/contacto'
@@ -22,9 +22,9 @@ import { Route as NosotrosHistoriaRouteImport } from './routes/nosotros.historia
 import { Route as AdmisionRequisitosRouteImport } from './routes/admision.requisitos'
 import { Route as AdmisionProcesoRouteImport } from './routes/admision.proceso'
 
-const PrimariaRoute = PrimariaRouteImport.update({
-  id: '/primaria',
-  path: '/primaria',
+const PoliticasRoute = PoliticasRouteImport.update({
+  id: '/politicas',
+  path: '/politicas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NoticiasRoute = NoticiasRouteImport.update({
@@ -88,7 +88,7 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof ContactoRoute
   '/docentes': typeof DocentesRoute
   '/noticias': typeof NoticiasRoute
-  '/primaria': typeof PrimariaRoute
+  '/politicas': typeof PoliticasRoute
   '/admision/proceso': typeof AdmisionProcesoRoute
   '/admision/requisitos': typeof AdmisionRequisitosRoute
   '/nosotros/historia': typeof NosotrosHistoriaRoute
@@ -102,7 +102,7 @@ export interface FileRoutesByTo {
   '/contacto': typeof ContactoRoute
   '/docentes': typeof DocentesRoute
   '/noticias': typeof NoticiasRoute
-  '/primaria': typeof PrimariaRoute
+  '/politicas': typeof PoliticasRoute
   '/admision/proceso': typeof AdmisionProcesoRoute
   '/admision/requisitos': typeof AdmisionRequisitosRoute
   '/nosotros/historia': typeof NosotrosHistoriaRoute
@@ -117,7 +117,7 @@ export interface FileRoutesById {
   '/contacto': typeof ContactoRoute
   '/docentes': typeof DocentesRoute
   '/noticias': typeof NoticiasRoute
-  '/primaria': typeof PrimariaRoute
+  '/politicas': typeof PoliticasRoute
   '/admision/proceso': typeof AdmisionProcesoRoute
   '/admision/requisitos': typeof AdmisionRequisitosRoute
   '/nosotros/historia': typeof NosotrosHistoriaRoute
@@ -133,7 +133,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/docentes'
     | '/noticias'
-    | '/primaria'
+    | '/politicas'
     | '/admision/proceso'
     | '/admision/requisitos'
     | '/nosotros/historia'
@@ -147,7 +147,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/docentes'
     | '/noticias'
-    | '/primaria'
+    | '/politicas'
     | '/admision/proceso'
     | '/admision/requisitos'
     | '/nosotros/historia'
@@ -161,7 +161,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/docentes'
     | '/noticias'
-    | '/primaria'
+    | '/politicas'
     | '/admision/proceso'
     | '/admision/requisitos'
     | '/nosotros/historia'
@@ -176,7 +176,7 @@ export interface RootRouteChildren {
   ContactoRoute: typeof ContactoRoute
   DocentesRoute: typeof DocentesRoute
   NoticiasRoute: typeof NoticiasRoute
-  PrimariaRoute: typeof PrimariaRoute
+  PoliticasRoute: typeof PoliticasRoute
   AdmisionProcesoRoute: typeof AdmisionProcesoRoute
   AdmisionRequisitosRoute: typeof AdmisionRequisitosRoute
   NosotrosHistoriaRoute: typeof NosotrosHistoriaRoute
@@ -188,11 +188,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/primaria': {
-      id: '/primaria'
-      path: '/primaria'
-      fullPath: '/primaria'
-      preLoaderRoute: typeof PrimariaRouteImport
+    '/politicas': {
+      id: '/politicas'
+      path: '/politicas'
+      fullPath: '/politicas'
+      preLoaderRoute: typeof PoliticasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/noticias': {
@@ -280,7 +280,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactoRoute: ContactoRoute,
   DocentesRoute: DocentesRoute,
   NoticiasRoute: NoticiasRoute,
-  PrimariaRoute: PrimariaRoute,
+  PoliticasRoute: PoliticasRoute,
   AdmisionProcesoRoute: AdmisionProcesoRoute,
   AdmisionRequisitosRoute: AdmisionRequisitosRoute,
   NosotrosHistoriaRoute: NosotrosHistoriaRoute,

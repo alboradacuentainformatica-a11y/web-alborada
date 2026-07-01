@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
-import b1 from "@/assets/banner-1.jpg";
-import b2 from "@/assets/banner-2.jpg";
-import b3 from "@/assets/banner-3.jpg";
-import b4 from "@/assets/banner-4.jpg";
-import b5 from "@/assets/banner-5.jpg";
+import b1 from "@/assets/cocina3.jpg";
+import b2 from "@/assets/biblioteca.jpg";
+import b3 from "@/assets/Desfile.jpg";
+import b4 from "@/assets/adeporte.jpeg";
+import b5 from "@/assets/aula.jpg";
+import b6 from "@/assets/innovacion.jpeg";
 
 export const Route = createFileRoute("/nosotros/instalaciones")({
   head: () => ({
@@ -17,11 +18,13 @@ export const Route = createFileRoute("/nosotros/instalaciones")({
 });
 
 const items = [
-  { img: b5, title: "Aula de cómputo", desc: "Equipos modernos para el aprendizaje digital." },
-  { img: b3, title: "Biblioteca", desc: "Espacio dedicado a la lectura y la investigación." },
+  { img: b2, title: "Biblioteca", desc: "Espacio dedicado a la lectura y la investigación." },
+   { img: b5, title: "Aulas", desc: "Ambientes amplios, ventilados e iluminados." },
   { img: b4, title: "Área deportiva", desc: "Canchas para el desarrollo físico y recreativo." },
-  { img: b2, title: "Aulas", desc: "Ambientes amplios, ventilados e iluminados." },
-  { img: b1, title: "Dirección", desc: "Oficinas administrativas para la atención de padres." },
+  { img: b6, title: "Aula de cómputo", desc: "Equipos modernos para el aprendizaje digital." },
+  { img: b1, title: "Cocina", desc: "Ambiente donde prepararan los alimentos de los estudiantes." },
+  { img: b3, title: "Patio Desfile", desc: "Patio donde se puede practicar diferentes actividades institucionales." },
+  
 ];
 
 function InstalacionesPage() {

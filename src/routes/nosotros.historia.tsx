@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
-import b1 from "@/assets/banner-1.jpg";
-import b3 from "@/assets/banner-3.jpg";
-import b5 from "@/assets/banner-5.jpg";
+import b1 from "@/assets/historia1.png";
+import b3 from "@/assets/historia2.jpg";
+import b5 from "@/assets/patio.jpeg";
 
 export const Route = createFileRoute("/nosotros/historia")({
   head: () => ({
@@ -18,21 +18,25 @@ function HistoriaPage() {
   return (
     <>
       <PageHeader title="Nuestra Historia" subtitle="Más de dos décadas formando ciudadanos íntegros." />
-      <section className="mx-auto max-w-4xl px-6 py-16 space-y-6 text-lg leading-relaxed text-foreground">
-        <p>
-          La <strong>Institución Educativa La Alborada I.E. 30225</strong> nació con el firme propósito de brindar
-          una educación primaria pública de calidad a la comunidad. A lo largo de los años hemos formado a
-          generaciones de estudiantes que hoy son profesionales y ciudadanos comprometidos con su entorno.
-        </p>
-        <p>
-          Desde nuestros inicios, hemos apostado por una <strong>formación integral</strong>: combinamos la
-          excelencia académica con el desarrollo de valores, el deporte, la cultura y la innovación tecnológica.
-        </p>
-        <p>
-          Cada año celebramos nuestros logros y proyectamos nuevos retos, manteniendo siempre el compromiso con
-          los padres de familia y la comunidad educativa.
-        </p>
-      </section>
+      <section className="mx-auto max-w-4xl px-6 py-16 space-y-6 text-lg leading-relaxed text-foreground text-justify">
+  <p>
+    La <strong>Institución Educativa N° 30225 La Alborada</strong> del distrito de El Tambo-Huancayo fue creada el 
+    11 de mayo de 1965 mediante la R.D. N° 952-1965. Este año celebra <strong>61 años de vida institucional</strong>, 
+    formando generaciones con compromiso y valores.
+  </p>
+  <p>
+    Actualmente cuenta con la dirección de la Mg. <strong>Melcy Cárdenas Acuña</strong> y la subdirección del Lic. 
+    <strong> Dionisio Esteban Huayra</strong>, junto a un equipo de docentes y administrativos con amplia trayectoria 
+    profesional, dedicados a la educación de la niñez tambina.
+  </p>
+  <p>
+    Nuestra Institución brinda una <strong>educación moderna y sólida</strong>, acorde con los avances de la época. 
+    Se fundamenta en principios que fortalecen la vida moral y la disciplina, entendida como la aceptación libre y 
+    espontánea de reglas que conducen a una vida digna y honesta.
+  </p>
+  
+ 
+</section>
       <section className="mx-auto max-w-6xl px-6 pb-20 grid gap-6 md:grid-cols-3">
         {[b1, b3, b5].map((src, i) => (
           <div key={i} className="aspect-[4/3] overflow-hidden rounded-2xl shadow-sm border">
@@ -40,6 +44,9 @@ function HistoriaPage() {
           </div>
         ))}
       </section>
+
+
+
     </>
   );
 }

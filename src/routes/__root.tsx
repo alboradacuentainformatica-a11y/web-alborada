@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logoIcono from "../assets/logoIcono.ico";
 import { Navbar } from "../components/Navbar";
 import { SiteFooter } from "../components/SiteFooter";
 import { FloatingActions } from "../components/FloatingActions";
@@ -49,6 +50,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      {
+        rel: "icon",
+        href: logoIcono,
+      },
       {
         rel: "stylesheet",
         href: appCss,

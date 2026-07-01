@@ -19,15 +19,39 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <div>
-          <h4 className="text-sm font-bold mb-3">Contacto</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>La Alborada, Perú</span></li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>(+51) 000 000 000</span></li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>contacto@ielaalborada.edu.pe</span></li>
-            <li className="flex gap-2"><Clock className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>Lun – Vie: 8:00 a.m. – 3:00 p.m.</span></li>
-          </ul>
-        </div>
+      <div>
+  <h4 className="text-sm font-bold mb-3">Contacto</h4>
+  <ul className="space-y-2 text-sm text-muted-foreground">
+    <li className="flex gap-2">
+      <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+      <a 
+        href="https://maps.app.goo.gl/cbBuQZnThzqFxxKUA" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        La Alborada, Perú
+      </a>
+    </li>
+    <li className="flex gap-2">
+      <Phone className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+      <a href="tel:064636258" className="hover:underline">
+        064636258
+      </a>
+    </li>
+    <li className="flex gap-2">
+      <Mail className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+      <a href="mailto:Laalborada30225@gmail.com" className="hover:underline">
+        Laalborada30225@gmail.com
+      </a>
+    </li>
+    <li className="flex gap-2">
+      <Clock className="h-4 w-4 mt-0.5 text-primary shrink-0" />
+      <span>Lun – Vie: 8:00 a.m. – 3:30 p.m.</span>
+    </li>
+  </ul>
+</div>
+
 
         <div>
           <h4 className="text-sm font-bold mb-3">Enlaces rápidos</h4>
@@ -42,13 +66,13 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-bold mb-3">Síguenos</h4>
           <div className="flex gap-3">
-            <a href="#" aria-label="Facebook" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"><Facebook className="h-4 w-4" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100057612512300" target="_blank"  aria-label="Facebook" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"><Facebook className="h-4 w-4" /></a>
             <a href="#" aria-label="Instagram" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"><Instagram className="h-4 w-4" /></a>
             <a href="#" aria-label="TikTok" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform font-bold text-xs">TT</a>
           </div>
           <div className="mt-4 text-xs text-muted-foreground space-y-1">
-            <a href="#" className="block hover:text-primary">Política de privacidad</a>
-            <a href="#" className="block hover:text-primary">Mapa del sitio</a>
+            <a href="/politicas" className="block hover:text-primary">Política de privacidad</a>
+            <a href="https://maps.app.goo.gl/RCb53uchNYogBsHD8" target="_blank" className="block hover:text-primary">Mapa del sitio</a>
           </div>
         </div>
       </div>

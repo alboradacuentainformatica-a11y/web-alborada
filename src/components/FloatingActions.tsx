@@ -20,15 +20,7 @@ export function FloatingActions() {
           <ArrowUp className="h-5 w-5" />
         </button>
       )}
-      <a
-        href="https://wa.me/51000000000"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp institucional"
-        className="h-14 w-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition-transform grid place-items-center"
-      >
-        <MessageCircle className="h-6 w-6" />
-      </a>
+    
     </div>
   );
 }

@@ -25,7 +25,6 @@ const navItems = [
       { label: "Instalaciones", url: "/nosotros/instalaciones" },
     ],
   },
-  { label: "Primaria", url: "/primaria", icon: GraduationCap },
   { label: "Docentes", url: "/docentes", icon: Users },
   {
     label: "Admisión",
@@ -39,7 +38,7 @@ const navItems = [
     label: "Vida Estudiantil",
     icon: Info,
     children: [
-      { label: "Actividades", url: "/vida/actividades" },
+      { label: "Grados", url: "/vida/actividades" },
       { label: "Cronograma", url: "/vida/cronograma" },
     ],
   },
@@ -82,7 +81,11 @@ export function Navbar() {
             {navItems.map((item) =>
               item.children ? (
                 <div key={item.label} className="relative group">
-                  <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-accent transition-colors">
+                  <button className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                    item.children.some((c) => isActive(c.url))
+                      ? "text-primary bg-primary/10"
+                      : "text-foreground hover:bg-accent"
+                  }`}>
                     <item.icon className="h-4 w-4" />
                     {item.label}
                     <ChevronDown className="h-3 w-3" />
@@ -140,7 +143,11 @@ export function Navbar() {
                 <div key={item.label}>
                   <button
                     onClick={() => toggleExpanded(item.label)}
-                    className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-accent transition-colors"
+                    className={`flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                      item.children.some((c) => isActive(c.url))
+                        ? "text-primary bg-primary/10 font-semibold"
+                        : "text-foreground hover:bg-accent"
+                    }`}
                   >
                     <span className="flex items-center gap-2">
                       <item.icon className="h-4 w-4" />
