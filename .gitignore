@@ -1,4 +1,3 @@
-
 logs
 *.log
 npm-debug.log*
@@ -16,10 +15,12 @@ dist-ssr
 .nitro
 *.local
 
+.env
+.env.*
+!.env.example
 
 .wrangler/
 .dev.vars
-
 
 .vscode/*
 !.vscode/extensions.json
