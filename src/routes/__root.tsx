@@ -1,13 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  createRootRouteWithContext,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
+import { Outlet, createRootRouteWithContext } from "@tanstack/react-router";
 
-import appCss from "../styles.css?url";
-import logoIcono from "../assets/logoIcono.ico";
 import { Navbar } from "../components/Navbar";
 import { SiteFooter } from "../components/SiteFooter";
 import { FloatingActions } from "../components/FloatingActions";
@@ -36,69 +29,26 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "I.E. La Alborada 30225 — Educación Primaria" },
-      { name: "description", content: "Portal institucional de la I.E. La Alborada 30225. Excelencia académica, formación integral y valores en educación primaria." },
-      { name: "author", content: "Gato_Tech" },
-      { property: "og:title", content: "I.E. La Alborada 30225" },
-      { property: "og:description", content: "Portal institucional — Educación primaria de calidad." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-    ],
-    links: [
-      {
-        rel: "icon",
-        href: logoIcono,
-      },
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen w-full bg-background flex flex-col">
+      <div className="min-h-screen w-full bg-background flex flex-col font-sans antialiased">
         <Navbar />
         <main className="flex-1">
           <Outlet />
         </main>
         <SiteFooter />
         <FloatingActions />
+        <Toaster />
       </div>
     </QueryClientProvider>
   );
 }
+
 
