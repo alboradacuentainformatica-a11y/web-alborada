@@ -17,6 +17,8 @@ import b2 from "@/assets/bannerDocente.jpg";
 import b3 from "@/assets/biblioteca.jpg";
 import b4 from "@/assets/Desfile.jpg";
 import b5 from "@/assets/banner-5.jpg";
+import fotoDirectora from "@/assets/directora.png";
+import fotoSubdirector from "@/assets/subdirectorformal.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -142,14 +144,14 @@ function Index() {
       </p>
     </div>
 
-    {/* Cambiado a grid-cols-1, sm:grid-cols-2 y centrado */}
+    {/* Lo cambie a grid-cols-1, sm:grid-cols-2 y centrado -GATOTECH */}
     <div className="grid gap-8 sm:grid-cols-2 justify-center max-w-2xl mx-auto">
       
       {/* Tarjeta 1: Directora */}
       <div className="group rounded-2xl bg-card p-6 text-center shadow-sm border hover:-translate-y-1 hover:shadow-md transition-all">
         <div className="mx-auto h-28 w-28 overflow-hidden rounded-full border-4 border-primary/20 group-hover:border-primary transition-colors">
           <img 
-            src="/src/assets/directora.png" 
+            src={fotoDirectora} 
             alt="Mg. Melcy Cárdenas Acuña" 
             className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-350"
           />
@@ -165,7 +167,7 @@ function Index() {
       <div className="group rounded-2xl bg-card p-6 text-center shadow-sm border hover:-translate-y-1 hover:shadow-md transition-all">
         <div className="mx-auto h-28 w-28 overflow-hidden rounded-full border-4 border-primary/20 group-hover:border-primary transition-colors">
           <img 
-            src="/src/assets/subdirectorformal.png" // Cambia esto por la ruta real de tu foto
+            src={fotoSubdirector}
             alt="Prof. Dionison Esteban Huayra" 
             className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-350"
           />
