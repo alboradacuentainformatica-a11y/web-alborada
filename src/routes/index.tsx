@@ -18,7 +18,8 @@ import b3 from "@/assets/biblioteca.jpg";
 import b4 from "@/assets/Desfile.jpg";
 import b5 from "@/assets/banner-5.jpg";
 import fotoDirectora from "@/assets/directora.png";
-import fotoSubdirector from "@/assets/subdirectorformal.png";
+import fotoSubdirector from "@/assets/subdirector.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
