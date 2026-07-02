@@ -190,7 +190,7 @@ function Index() {
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-6 grid gap-10 md:grid-cols-3">
           <Counter end={524} label="Estudiantes" suffix="+" />
-          <Counter end={30} label="Docentes" />
+          <Counter end={30} label="Docentes"suffix="+" />
           <Counter end={61} label="Años de servicio" suffix="+" />
         </div>
       </section>
