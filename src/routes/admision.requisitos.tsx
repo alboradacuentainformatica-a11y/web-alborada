@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
-import { CheckCircle2, Download } from "lucide-react";
+import { CheckCircle2, Download, Eye } from "lucide-react";
 import fichaPdf from "@/assets/fichainscrip.pdf";
 
 export const Route = createFileRoute("/admision/requisitos")({
@@ -35,18 +35,25 @@ function RequisitosPage() {
             </li>
           ))}
         </ul>
-          <div className="mt-10 text-center">
-  {/* Usamos target="_blank" para abrir en nueva pestaña */}
-  <a 
-    href={fichaPdf} 
-    target="_blank"
-    rel="noreferrer"
-    className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:scale-105 transition-transform"
-  >
-    <Download className="h-4 w-4" /> Ver ficha de matrícula (PDF)
-  </a>
-</div>
-        
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+         
+
+          <a 
+            href={fichaPdf} 
+            download="Ficha_Inscripcion_Matricula_Alborada.pdf"
+            className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:scale-105 transition-transform shadow-md"
+          >
+            <Download className="h-4 w-4" /> Descargar Ficha Matrícula (PDF)
+          </a>
+          <a 
+            href={fichaPdf} 
+            download="Ficha_Inscripcion_Matricula_Alborada.pdf"
+            className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 font-semibold hover:scale-105 transition-transform shadow-md"
+          >
+            <Download className="h-4 w-4" /> Descargar ficha (PDF)
+          </a>
+
+        </div>
       </section>
     </>
   );

@@ -16,7 +16,7 @@ const steps = [
   { t: "Presentar documentación", d: "Entrega los documentos requeridos del estudiante y apoderado." },
   { t: "Evaluación o entrevista", d: "Breve evaluación o entrevista según el grado al que postula." },
   { t: "Confirmación de matrícula", d: "Se confirma la vacante y se coordina la fecha de matrícula." },
-  { t: "Registro oficial", d: "Se formaliza la matrícula en el sistema institucional." },
+  { t: "Registro oficial", d: "Se formaliza la matrícula en la institución." },
 ];
 
 function ProcesoPage() {

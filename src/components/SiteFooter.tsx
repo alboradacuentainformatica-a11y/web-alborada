@@ -67,8 +67,8 @@ export function SiteFooter() {
           <h4 className="text-sm font-bold mb-3">Síguenos</h4>
           <div className="flex gap-3">
             <a href="https://www.facebook.com/profile.php?id=100057612512300" target="_blank"  aria-label="Facebook" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"><Facebook className="h-4 w-4" /></a>
-            <a href="#" aria-label="Instagram" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"><Instagram className="h-4 w-4" /></a>
-            <a href="#" aria-label="TikTok" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform font-bold text-xs">TT</a>
+            {/*<a href="#" aria-label="Instagram" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform"><Instagram className="h-4 w-4" /></a>
+            <a href="#" aria-label="TikTok" className="h-10 w-10 grid place-items-center rounded-full bg-primary text-primary-foreground hover:scale-110 transition-transform font-bold text-xs">TT</a>*/}
           </div>
           <div className="mt-4 text-xs text-muted-foreground space-y-1">
             <a href="/politicas" className="block hover:text-primary">Política de privacidad</a>
@@ -78,7 +78,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t">
         <div className="mx-auto max-w-7xl px-6 py-4 text-center text-xs text-muted-foreground">
-          © 2026 – I.E. La Alborada I.E. 30225. Todos los derechos reservados. Elaborado por <span className="font-semibold text-foreground">Gato_Tech</span>.
+          © 2026 – I.E. La Alborada I.E. 30225. Todos los derechos reservados. Elaborado por <span className="font-semibold text-foreground">Equipo Alborada</span>.
         </div>
       </div>
     </footer>
